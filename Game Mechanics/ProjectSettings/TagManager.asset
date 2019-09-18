@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pick Up 1
+  - Pick Up 2
+  - Pick Up 3
+  - Pick Up 4
+  - Door
+  - Prize
+  - Door 2
+  - Hidden Door
+  - Wrong Ground
+  - Watch Out
+  - Room Lock
+  - EndDoor
+  - ColChanger
+  - PaintGround
+  - PaintGroundC1
+  - PaintGroundC2
+  - PaintGroundC3
+  - PaintGroundC4
+  - PaintGroundC5
+  - PaintGroundC6
+  - PaintGroundC7
+  - PaintGroundG1
+  - PaintGroundG2
+  - PaintGroundG3
+  - PaintGroundG4
+  - PaintGroundG5
+  - PaintGroundY1
+  - PaintGroundY2
+  - PaintGroundR1
+  - PaintGroundR2
+  - PaintGroundR3
+  - PaintGroundR4
+  - PaintGroundR5
+  - PaintGroundR6
+  - PaintGroundR7
+  - PaintGroundR8
+  - PaintGroundB1
+  - PaintGroundB2
+  - PaintGroundB3
+  - PaintGroundB4
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
