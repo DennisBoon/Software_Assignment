@@ -12,7 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     public bool controllable = false;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+
     void Update()
     {
         // Player movement

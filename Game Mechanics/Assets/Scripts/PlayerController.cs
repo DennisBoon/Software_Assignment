@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
 	private float yaw = 0.0f;
 	private float pitch = 0.0f;
 	private Vector2 mouseLook;
-	GameObject character;
 
 	// Text variables.
 	public float textTime = 3;
