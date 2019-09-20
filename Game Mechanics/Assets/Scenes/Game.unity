@@ -2756,11 +2756,11 @@ GameObject:
   - component: {fileID: 856538605}
   - component: {fileID: 856538604}
   - component: {fileID: 856538603}
-  - component: {fileID: 856538610}
   - component: {fileID: 856538602}
   - component: {fileID: 856538613}
   - component: {fileID: 856538612}
   - component: {fileID: 856538611}
+  - component: {fileID: 856538610}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -2825,7 +2825,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!143 &856538605
 CharacterController:
@@ -2899,7 +2899,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 90
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2931,7 +2931,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   sprintSpeed: 10
-  jumpSpeed: 6
   gravity: 20
   controllable: 1
 --- !u!114 &856538611
@@ -2967,8 +2966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   red: 0
   blue: 0
-  wrongPickup1: 0
-  wrongPickup2: 0
+  green: 0
+  yellow: 0
 --- !u!114 &856538613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,7 +2980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 043c7c8d8a4a0f545b7cf0245b8d78d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pPU: {fileID: 856538612}
   dia: {fileID: 856538611}
 --- !u!1 &884231577
 GameObject:

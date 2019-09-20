@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public PlayerPickUps pPU;
     public Dialogue dia;
 
     void OnTriggerEnter(Collider col)
@@ -12,75 +11,75 @@ public class PlayerCollision : MonoBehaviour
         // Collision for pick up 1
         if (col.gameObject.CompareTag("Pick Up 1"))
         {
-            if (pPU.blue > 0 && pPU.wrongPickup1 > 0 ||
-                pPU.blue > 0 && pPU.wrongPickup2 > 0 ||
-                pPU.wrongPickup1 > 0 && pPU.wrongPickup2 > 0)
+            if (PickUps.instance.blue > 0 && PickUps.instance.green > 0 ||
+                PickUps.instance.blue > 0 && PickUps.instance.yellow > 0 ||
+                PickUps.instance.green > 0 && PickUps.instance.yellow > 0)
             {
                 dia.SetDialogue(dia.twoColorsPicked, "You already picked 2 colors");
             }
             else
             {
-                pPU.Increment(pPU.red, 1);
+                PickUps.instance.Increment(PickUps.instance.red, 1);
                 col.gameObject.SetActive(false);
             }
         }
         // Collision for pick up 2
         if (col.gameObject.CompareTag("Pick Up 2"))
         {
-            if (pPU.red > 0 && pPU.wrongPickup1 > 0 ||
-                pPU.red > 0 && pPU.wrongPickup2 > 0 ||
-                pPU.wrongPickup1 > 0 && pPU.wrongPickup2 > 0)
+            if (PickUps.instance.red > 0 && PickUps.instance.green > 0 ||
+                PickUps.instance.red > 0 && PickUps.instance.yellow > 0 ||
+                PickUps.instance.green > 0 && PickUps.instance.yellow > 0)
             {
                 dia.SetDialogue(dia.twoColorsPicked, "You already picked 2 colors");
             }
             else
             {
-                pPU.Increment(pPU.blue, 1);
+                PickUps.instance.Increment(PickUps.instance.blue, 1);
                 col.gameObject.SetActive(false);
             }
         }
         // Collision for pick up 3
         if (col.gameObject.CompareTag("Pick Up 3"))
         {
-            if (pPU.red > 0 && pPU.blue > 0 ||
-                pPU.red > 0 && pPU.wrongPickup2 > 0 ||
-                pPU.blue > 0 && pPU.wrongPickup2 > 0)
+            if (PickUps.instance.red > 0 && PickUps.instance.blue > 0 ||
+                PickUps.instance.red > 0 && PickUps.instance.yellow > 0 ||
+                PickUps.instance.blue > 0 && PickUps.instance.yellow > 0)
             {
                 dia.SetDialogue(dia.twoColorsPicked, "You already picked 2 colors");
             }
             else
             {
-                pPU.Increment(pPU.wrongPickup1, 1); ;
+                PickUps.instance.Increment(PickUps.instance.green, 1); ;
                 col.gameObject.SetActive(false);
             }
         }
         // Collision for pick up 4
         if (col.gameObject.CompareTag("Pick Up 4"))
         {
-            if (pPU.red > 0 && pPU.blue > 0 ||
-                pPU.red > 0 && pPU.wrongPickup1 > 0 ||
-                pPU.blue > 0 && pPU.wrongPickup1 > 0)
+            if (PickUps.instance.red > 0 && PickUps.instance.blue > 0 ||
+                PickUps.instance.red > 0 && PickUps.instance.green > 0 ||
+                PickUps.instance.blue > 0 && PickUps.instance.green > 0)
             {
                 dia.SetDialogue(dia.twoColorsPicked, "You already picked 2 colors");
             }
             else
             {
-                pPU.Increment(pPU.wrongPickup2, 1);
+                PickUps.instance.Increment(PickUps.instance.yellow, 1);
                 col.gameObject.SetActive(false);
             }
         }
 
         // Collision for the door
-        if (col.gameObject.CompareTag("Door") && pPU.red > 0 && pPU.blue > 0)
+        if (col.gameObject.CompareTag("Door") && PickUps.instance.red > 0 && PickUps.instance.blue > 0)
         {
             dia.SetDialogue(dia.notYet, "Puzzle Complete!");
             Destroy(col.gameObject);
         }
-        else if (col.gameObject.CompareTag("Door") && pPU.wrongPickup1 > 0 && pPU.red > 0 || 
-            col.gameObject.CompareTag("Door") && pPU.wrongPickup1 > 0 && pPU.blue > 0 || 
-            col.gameObject.CompareTag("Door") && pPU.wrongPickup2 > 0 && pPU.red > 0 || 
-            col.gameObject.CompareTag("Door") && pPU.wrongPickup2 > 0 && pPU.blue > 0 || 
-            col.gameObject.CompareTag("Door") && pPU.wrongPickup1 > 0 && pPU.wrongPickup2 > 0)
+        else if (col.gameObject.CompareTag("Door") && PickUps.instance.green > 0 && PickUps.instance.red > 0 || 
+            col.gameObject.CompareTag("Door") && PickUps.instance.green > 0 && PickUps.instance.blue > 0 || 
+            col.gameObject.CompareTag("Door") && PickUps.instance.yellow > 0 && PickUps.instance.red > 0 || 
+            col.gameObject.CompareTag("Door") && PickUps.instance.yellow > 0 && PickUps.instance.blue > 0 || 
+            col.gameObject.CompareTag("Door") && PickUps.instance.green > 0 && PickUps.instance.yellow > 0)
         {
             dia.SetDialogue(dia.wrongCombination, "Wrong color combination. Try again (Press R to restart)");
         }
